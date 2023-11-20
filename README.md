@@ -1,3 +1,32 @@
+DC motor 
+```
+const int ENA = 6; // PWM-enabled digital pin connected to ENA of the motor driver
+const int IN1 = 7; // Digital pin connected to IN1 of the motor driver 
+const int IN2 = 8; // Digital pin connected to IN2 of the motor driver 
+void setup() 
+{
+pinMode(ENA, OUTPUT);
+pinMode(IN1, OUTPUT); 
+pinMode(IN2, OUTPUT);
+}
+void loop() 
+{
+// Rotate the motor in one direction (forward) 
+analogWrite(ENA, 255);// Adjust the value (0-255) to control the motor speed
+digitalWrite(IN1, HIGH);
+digitalWrite(IN2, LOW); 
+ 
+delay(2000);
+
+// Rotate the motor in one direction (backward) 
+analogWrite(ENA, 255); // Adjust the value (0-255) to control the motor speed
+digitalWrite(IN1, LOW);
+digitalWrite(IN2, HIGH); 
+
+delay(2000);
+}
+```
+
 ## LED
 
 ```
